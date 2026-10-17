@@ -9,4 +9,4 @@ services:
       STUDENT_GROUP: ${STUDENT_GROUP:-IT2-2314}
       STUDENT_ID: ${STUDENT_ID:-37845}
     ports:
-      - "8080:8080"
+      - "8081:8080"
