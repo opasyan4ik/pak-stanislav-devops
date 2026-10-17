@@ -1,0 +1,12 @@
+services:
+  student-app:
+    build: .
+    image: pak-stanislav-devops
+    container_name: pak-stanislav-compose
+    environment:
+      STUDENT_NAME: ${STUDENT_NAME:-Stanislav}
+      STUDENT_SURNAME: ${STUDENT_SURNAME:-Pak}
+      STUDENT_GROUP: ${STUDENT_GROUP:-IT2-2314}
+      STUDENT_ID: ${STUDENT_ID:-37845}
+    ports:
+      - "8080:8080"
