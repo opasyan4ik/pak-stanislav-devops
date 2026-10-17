@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+project_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+cd "$project_dir"
+
+python3 -m compileall -q app
+python3 -m unittest discover -s tests -v
+printf '%s\n' 'Build and checks completed successfully.'
